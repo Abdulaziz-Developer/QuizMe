@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.App {
+  height: 100vh;
+  background: url("../imgs/bg.jpg");
+  background-position: center;
+  background-size: cover;
+  font-family: "Roboto Mono", monospace;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}

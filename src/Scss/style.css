@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.App {
+  height: 100vh;
+  background: url("../imgs/bg.jpg");
+  background-position: center;
+  background-size: cover;
+  font-family: "Roboto Mono", monospace;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container {
+  width: 100%;
+  height: 500px;
+  background: #93a8ac;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+}
+
+.container .questions {
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.container .questions .question {
+  width: 300px;
+  height: 80px;
+  background: #d7ceb2;
+  border-radius: 7px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px;
+}
+
+.container .questions .question h6 {
+  font-size: 20px;
+}
+
+.container .inputs {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 2%;
+}
+
+.container .inputs input {
+  background: #4c5760;
+  font-size: 25px;
+  height: 50px;
+  outline: 0;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  direction: rtl;
+  color: white;
+}
+
+.container .inputs button {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 26px;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.72);
+  border-radius: 8px;
+  margin-right: 10px;
+  padding: 10px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+.container .inputs button:hover {
+  color: rosybrown;
+}
+
+.container .inputs button:active {
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+}
+/*# sourceMappingURL=style.css.map */
