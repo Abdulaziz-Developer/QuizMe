@@ -7,10 +7,10 @@ class QuestionsStore {
       questions: observable,
     });
   }
-  addQuestion = (data) => {
-    this.questions.push(data);
-    console.log(this.questions);
-  };
+  // addQuestion = (data) => {
+  //   this.questions.push(data);
+  //   console.log(this.questions);
+  // };
 }
 
 const questionsStore = new QuestionsStore();
