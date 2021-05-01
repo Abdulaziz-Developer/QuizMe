@@ -22,12 +22,63 @@
 
 .container {
   width: 100%;
-  height: 500px;
+  height: 700px;
   background: #93a8ac;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   overflow: hidden;
+}
+
+.container .result-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.container .result-wrapper h5 {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.container .result-wrapper button {
+  width: 170px;
+  height: 70px;
+  text-align: center;
+  margin-left: auto;
+  font-size: 30px;
+  border-radius: 20px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-bottom: 30px;
+  background-color: #d7ceb2;
+  border: black solid;
+}
+
+.container .result-title {
+  color: black;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 40px;
+}
+
+.container .result-many-q {
+  color: black;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 30px;
 }
 
 .container .questions {
@@ -37,7 +88,6 @@
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  background-color: red;
 }
 
 .container .questions .question {
@@ -66,7 +116,33 @@
   font-size: 20px;
 }
 
-.container .inputs {
+.container .wrapper {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.container .wrapper .start-quiz {
+  width: 90px;
+  height: 70px;
+  font-size: 20px;
+  border-radius: 20px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  background-color: #d7ceb2;
+  border: black solid;
+}
+
+.container .wrapper .inputs {
   width: 40%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -77,7 +153,7 @@
   padding: 2%;
 }
 
-.container .inputs input {
+.container .wrapper .inputs input {
   background: #4c5760;
   font-size: 25px;
   height: 50px;
@@ -89,7 +165,7 @@
   color: white;
 }
 
-.container .inputs button {
+.container .wrapper .inputs button {
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
@@ -106,12 +182,95 @@
   transition: 0.2s ease-in-out;
 }
 
-.container .inputs button:hover {
+.container .wrapper .inputs button:hover {
   color: rosybrown;
 }
 
-.container .inputs button:active {
+.container .wrapper .inputs button:active {
   -webkit-transform: scale(0.5);
           transform: scale(0.5);
+}
+
+.container .wrapper .start-quiz-span {
+  margin: auto 40px 30px;
+}
+
+.container .wrapper .start-quiz-span button {
+  width: 150px;
+  height: 60px;
+  border-radius: 20px;
+  font-size: 20px;
+}
+
+.container2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 500px;
+  background: #93a8ac;
+}
+
+.container2 .next-q {
+  width: 90px;
+  height: 70px;
+  text-align: center;
+  font-size: 30px;
+  border-radius: 20px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-bottom: 30px;
+  background-color: #d7ceb2;
+  border: black solid;
+}
+
+.container2 .next-question {
+  height: 100px;
+  width: 200px;
+  font-size: 30px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+.container2 .question-name {
+  margin-top: 30px;
+  font-size: 40px;
+}
+
+.container2 .answers-list {
+  height: 100%;
+  margin: auto;
+  margin-top: 100px;
+}
+
+.container2 .answer-button {
+  width: 200px;
+  height: 100px;
+  text-align: center;
+  margin: 20px;
+  border-radius: 20px;
+  font-size: 25px;
+  -webkit-transition: 0.1s ease-in-out;
+  transition: 0.1s ease-in-out;
+}
+
+.container2 .answer-button:hover {
+  border: black 2 solid;
+}
+
+.container2 .answer-button:active {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
 }
 /*# sourceMappingURL=style.css.map */
