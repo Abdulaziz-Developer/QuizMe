@@ -4,13 +4,11 @@ import AnswerItem from "../AnswerItem";
 import { Redirect } from "react-router";
 import answerStore from "../stores/answerStore";
 
-const Quiz = ({ timer, setTimer, handlePause, formatTime, questions }) => {
+const Quiz = ({ timer, setTimer, formatTime, questions }) => {
   const [isAnswered, setIsAnswered] = useState(false);
-  //
-  let [index, setIndex] = useState(0);
+  const [index, setIndex] = useState(0);
 
   if (index === questions.length) {
-    // handlePause();
     return <Redirect to="/result" />;
   }
 
@@ -60,9 +58,9 @@ const Quiz = ({ timer, setTimer, handlePause, formatTime, questions }) => {
   // shuffle(listOfAnswer);
 
   const next = () => {
+    answerStore.addTimer(timer);
     setIsAnswered(false);
     setIndex(index + 1);
-    answerStore.addTimer(timer);
     setTimer(0);
   };
 

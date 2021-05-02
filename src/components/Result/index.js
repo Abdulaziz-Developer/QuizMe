@@ -1,4 +1,3 @@
-import { observer } from "mobx-react";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -6,11 +5,9 @@ import { Link } from "react-router-dom";
 import answerStore from "../stores/answerStore";
 
 const Result = () => {
-  const [counter, setCounter] = useState(0);
-  setCounter(counter + 1);
+  const { timers } = answerStore;
   const { correctAnswers } = answerStore;
   const { incorrectAnswers } = answerStore;
-
   const { resultQestions } = answerStore;
   const answers = resultQestions.map((question) => question.a);
 
@@ -43,10 +40,8 @@ const Result = () => {
     return ` ${getMinutes} : ${getSeconds}`;
   };
 
-  let { timers } = answerStore;
-
   const reducer = (accumulator, currentValue) => accumulator + currentValue;
-  let totalsum = timers ?? timers.reduce(reducer);
+  let totalsum = timers.reduce(reducer);
 
   countCorrect(answers, correctAnswers);
   countIncorrect(answers, incorrectAnswers);
@@ -84,4 +79,4 @@ const Result = () => {
   );
 };
 
-export default observer(Result);
+export default Result;

@@ -58,6 +58,7 @@ const Routes = () => {
     const getMinutes = `0${minutes % 60}`.slice(-2);
     return ` ${getMinutes} : ${getSeconds}`;
   };
+
   return (
     <Switch>
       <Route exact path="/">
@@ -73,7 +74,7 @@ const Routes = () => {
         />
       </Route>
       <Route exact path="/result">
-        <Result questions={questions} />
+        <Result />
       </Route>
       <Route exact path="/add">
         <AddQuestion questions={questions} />

@@ -1,6 +1,5 @@
 import { makeAutoObservable, autorun } from "mobx";
 import localStorage from "mobx-localstorage";
-import { useHistory } from "react-router";
 
 class AnswerStore {
   questions = [
@@ -73,7 +72,7 @@ class AnswerStore {
   incorrectAnswers = [];
   resultQestions = [];
   timers = [];
-  tries = [];
+
   constructor() {
     makeAutoObservable(this);
   }
@@ -88,14 +87,10 @@ class AnswerStore {
 
   addTimer = (time) => {
     this.timers.push(time);
-    localStorage.setItem("questions", this.questions);
+    localStorage.setItem("timers", this.timers);
     autorun(() => {
-      localStorage.getItem("questions");
+      localStorage.getItem("timers");
     });
-    console.log(
-      "🚀 ~ file: answerStore.js ~ line 94 ~ AnswerStore ~ autorun ~ localStorage.getItem",
-      localStorage.getItem
-    );
   };
 
   addCorrectAnswer = (answer) => {
@@ -122,26 +117,11 @@ class AnswerStore {
     });
   };
 
-  addTry = (anas) => {
-    this.tries.push(anas);
-    localStorage.setItem("tries", this.tries);
-    autorun(() => {
-      localStorage.getItem("tries");
-    });
-  };
-
   checkForAnswer = () => {
-    const tries = localStorage.getItem("tries");
     const questions = localStorage.getItem("questions");
     const correct = localStorage.getItem("correct");
     const incorrect = localStorage.getItem("incorrect");
     const resultQestions = localStorage.getItem("resultQestions");
-
-    if (tries) {
-      this.tries = tries;
-    } else {
-      this.tries = [];
-    }
 
     if (questions) {
       this.questions = questions;
